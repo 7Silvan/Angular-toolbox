@@ -8,8 +8,8 @@
     <title>Chrome Extension with Twitter Bootstrap 3.0</title>
 
     <!-- Scripts -->
-    <script src="js/jquery-2.0.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lib/jquery-2.0.3.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
 
     <!-- Cascading Style Sheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -18,7 +18,18 @@
     <script>
         $(function () {
             // todo: load switch position
+            // todo: handler on switching
         })
+
+        function appendStackTraceResolver() {
+            var s = document.createElement('script');
+            // todo: add "script.js" to web_accessible_resources in manifest.json
+            s.src = chrome.extension.getURL('StacktraceResolver.js');
+            s.onload = function () {
+                this.parentNode.removeChild(this);
+            };
+            (document.head || document.documentElement).appendChild(s);
+        }
     </script>
 </head>
 
