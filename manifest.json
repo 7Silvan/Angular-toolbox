@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "Pragmatists AngularJS-toolbox",
-	"description": "A toolbox for work with AngularJS",
+	"name": "AngularJS-toolbox",
+	"description": "A toolbox for work with AngularJS from Pragmatists",
 	"version": "1.0",
 	"permissions": [
 		"storage"
@@ -18,8 +18,18 @@
 		},
 		"default_popup": "popup.html"
 	},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/StacktraceResolver.js"],
+            "run_at": "document_start"
+        }
+
+    ],
 	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"web_accessible_resources": [
-		"img/icon128.png"
+		"img/logo128.png",
+        "js/StacktraceResolver.js",
+        "js/ErrorHandler.js"
 	]
 }
