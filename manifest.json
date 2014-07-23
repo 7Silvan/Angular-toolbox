@@ -4,6 +4,10 @@
 	"description": "A toolbox for work with AngularJS from Pragmatists",
 	"version": "1.0",
 	"permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "chrome://favicon/",
 		"storage"
 	],
 	"icons": { 
@@ -26,7 +30,6 @@
         }
 
     ],
-	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"web_accessible_resources": [
 		"img/logo128.png",
         "js/StacktraceResolver.js",

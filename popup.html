@@ -10,30 +10,13 @@
     <!-- Scripts -->
     <script src="js/lib/jquery-2.0.3.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/popup.js"></script>
 
     <!-- Cascading Style Sheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/custom.css" rel="stylesheet" media="screen">
 
-    <script>
-        $(function () {
-            // todo: load switch position
-            // todo: handler on switching
-        })
 
-        /*function appendStackTraceResolver() {
-            console.log('appendStackTraceResolver have run');
-            var s = document.createElement('script');
-            // todo: add "script.js" to web_accessible_resources in manifest.json
-            s.src = chrome.extension.getURL('js/StacktraceResolver.js');
-            s.onload = function () {
-                this.parentNode.removeChild(this);
-            };
-            (document.head || document.documentElement).appendChild(s);
-        }
-
-        appendStackTraceResolver();*/
-    </script>
 </head>
 
 <body>
@@ -59,10 +42,10 @@
             <div class="span6 pull-right" style="margin-right: 20px;">
                 <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-success">
-                        <input type="radio" name="stacktrace" id="on">On
+                        <input type="radio" name="stacktrace" value="on">On
                     </label>
                     <label class="btn btn-danger active">
-                        <input type="radio" name="stacktrace" id="off">Off
+                        <input type="radio" name="stacktrace" value="off">Off
                     </label>
                 </div>
             </div>
